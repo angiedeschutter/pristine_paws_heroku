@@ -16,7 +16,7 @@ import Edit from './Components/Edit'
 function App() {
   //Sets document title
   useEffect(() => {
-    document.title = "MS3";
+    document.title = "Pristine Paws";
   }, []);
 
   return (

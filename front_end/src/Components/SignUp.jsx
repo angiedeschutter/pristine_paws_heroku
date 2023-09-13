@@ -12,7 +12,7 @@ function SignUp() {
     const createNewUser = async (e) => {
         e.preventDefault()
         const newUser = { first_name, last_name, email, password }
-        const response = await fetch(`http://localhost:4000/login`,
+        const response = await fetch(`${process.env.REACT_APP_SERVER_URL}login`,
             {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -41,7 +41,7 @@ function SignUp() {
                     </div>
                     <div className="inputs">
                         <label htmlFor='password'>Password</label>
-                        <input type='password' id='password' name='password' value={password} onChange={(e) => setPassword(e.target.value)} required></input>
+                        <input type='password' id='password' name='password' minLength="8" value={password} onChange={(e) => setPassword(e.target.value)} required></input>
                     </div>
                     <input className='button' type="submit" value="Submit" />
                 </div>

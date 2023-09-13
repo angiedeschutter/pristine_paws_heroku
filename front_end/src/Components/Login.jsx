@@ -18,7 +18,7 @@ function Login() {
     const authUser = async (e) => {
         e.preventDefault()
         const user = { email, password }
-        const response = await fetch(`http://localhost:4000/auth/`, {
+        const response = await fetch(`${process.env.REACT_APP_SERVER_URL}auth/`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

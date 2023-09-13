@@ -20,7 +20,7 @@ function AddService() {
     const newService = async (e) => {
         e.preventDefault()
         const newAppt= { dog_name, breed, size, pack, date, time, user_id}
-        const response = await fetch(`http://localhost:4000/service`, 
+        const response = await fetch(`${process.env.REACT_APP_SERVER_URL}service`, 
         {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
