@@ -35,7 +35,7 @@ app.get('/', (req, res) => {
 
 // Controllers
 
-app.use('/login', require('./controllers/login_controller'))
+app.use('/logins', require('./controllers/login_controller'))
 app.use('/service', require('./controllers/service_controller'))
 app.use('/auth', require('./controllers/authentication'))
 
