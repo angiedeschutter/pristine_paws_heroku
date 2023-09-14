@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use(defineCurrentUser)
 
 // SEQUELIZE CONNECTION
-//const sequelize = new Sequelize(process.env.DATABASE_URL)
+const sequelize = new Sequelize(process.env.DATABASE_URL)
 
 
 // serve static front end in production mode
