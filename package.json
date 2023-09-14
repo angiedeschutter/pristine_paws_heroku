@@ -13,6 +13,9 @@
     "start": "node index.js",
     "heroku-postbuild": "cd front_end && npm install && npm run build"
   },
+  "production": {
+    "use_env_variable": "DATABASE_URL"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
