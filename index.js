@@ -16,12 +16,7 @@ app.use(defineCurrentUser)
 
 // SEQUELIZE CONNECTION
 //const sequelize = new Sequelize(process.env.PG_URI)
-const { DB_HOST, DB_NAME, DB_USERNAME, DB_PASSWORD } = process.env
-export const sequelize = new Sequelize(DB_NAME, DB_USERNAME, DB_PASSWORD, {
-    host: DB_HOST,
-    dialect: 'postgres',
-    logging: false,
-  })
+
 
 // serve static front end in production mode
 if (process.env.NODE_ENV === "production") {
