@@ -20,7 +20,7 @@ function AddService() {
     const newService = async (e) => {
         e.preventDefault()
         const newAppt= { dog_name, breed, size, pack, date, time, user_id}
-        const response = await fetch(`${process.env.REACT_APP_SERVER_URL}service`, 
+        const response = await fetch(`https://pristine-paws-bd61149d81a0.herokuapp.com/service`, 
         {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},

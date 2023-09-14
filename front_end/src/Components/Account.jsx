@@ -9,7 +9,7 @@ function Account() {
     //GET THE SERVICES FROM THE DB WHERE ALL ARE FORM THE SAME USER_ID
     const getServices = async () => {
         try {
-            const findServices = await fetch(`${process.env.REACT_APP_SERVER_URL}${currentUser.user_id}`)
+            const findServices = await fetch(`https://pristine-paws-bd61149d81a0.herokuapp.com/${currentUser.user_id}`)
             const jsonData = await findServices.json()
             setService(jsonData)
         } catch (Error) {
