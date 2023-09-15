@@ -15,7 +15,16 @@ app.use(express.urlencoded({ extended: false }))
 app.use(defineCurrentUser)
 
 // SEQUELIZE CONNECTION
-const sequelize = new Sequelize(process.env.DATABASE_URL)
+const sequelize = new Sequelize(process.env.DATABASE_URL, {
+    dialect: 'postgres',
+    protocol: 'postgres',
+    dialectOptions: {
+        ssl:{
+            require: true, 
+            rejectUnauthorized:false
+        }
+    }
+})
 
 
 // serve static front end in production mode
