@@ -22,7 +22,7 @@ const sequelize = new Sequelize(dbUrl, {
     dialectOptions: {
         ssl:{
             require: true, 
-            rejectUnauthorized:false
+            rejectUnauthorized: false
         }
     }
 })
