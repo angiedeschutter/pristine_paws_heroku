@@ -1,7 +1,6 @@
-import { CurrentUser } from '../contexts/CurrentUser'
-import {  useContext } from "react"
+
 function Services() {
-    const { currentUser } = useContext(CurrentUser)
+    
     return (
 
         <div class='services'>

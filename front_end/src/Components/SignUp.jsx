@@ -12,7 +12,7 @@ function SignUp() {
     const createNewUser = async (e) => {
         e.preventDefault()
         const newUser = { first_name, last_name, email, password }
-        const response = await fetch('https://pristine-paws-bd61149d81a0.herokuapp.com/logins',
+        const response = await fetch(`${process.env.REACT_APP_SERVER_URL}logins`,
             {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },

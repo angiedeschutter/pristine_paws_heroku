@@ -8,7 +8,7 @@ function CurrentUserProvider({ children }){
     const [currentUser, setCurrentUser] = useState(null)
     useEffect(() => {
         const getLoggedUser = async () => {
-            let response = await fetch('https://pristine-paws-bd61149d81a0.herokuapp.com/auth/profile',{
+            let response = await fetch(`${process.env.REACT_APP_SERVER_URL}auth/profile`,{
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('token')}`
                 }
