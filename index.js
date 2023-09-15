@@ -14,7 +14,7 @@ app.use(cors())
 app.use(express.urlencoded({ extended: false }))
 app.use(defineCurrentUser)
 
-let dbUrl = `postgres://${process.env.DB_USERNAME}:${process.env.DB_USERNAME}@${process.env.DB_HOST}:5432/${process.env.DB_DATABASE}`
+let dbUrl = `postgres://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:5432/${process.env.DB_DATABASE}`
 // SEQUELIZE CONNECTION
 const sequelize = new Sequelize(dbUrl, {
     dialect: 'postgres',
