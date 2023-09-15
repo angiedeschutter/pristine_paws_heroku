@@ -16,6 +16,11 @@ export default function NavigationBar() {
         localStorage.removeItem('token')
         window.location.href = "/"
     }
+
+    window.onbeforeunload = function() {
+        localStorage.clear();
+     }
+
     if (currentUser) {
         login = (
             <>
