@@ -19,7 +19,7 @@ function Edit() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch(`${process.env.REACT_APP_SERVER_URL}${service_id}`)
+            const response = await fetch(`${process.env.REACT_APP_SERVER_URL}service/${service_id}`)
             const resData = await response.json()
             setService(resData)
         }
@@ -31,7 +31,7 @@ function Edit() {
     async function editAppt(e) {
         e.preventDefault()
 
-        await fetch(`${process.env.REACT_APP_SERVER_URL}${service_id}`, {
+        await fetch(`${process.env.REACT_APP_SERVER_URL}service/${service_id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -45,7 +45,7 @@ function Edit() {
     //DELETE APPOINTMENT FUNCTION
     const deleteAppt = async () => {
         try {
-            await fetch(`${process.env.REACT_APP_SERVER_URL}${service_id}`,
+            await fetch(`${process.env.REACT_APP_SERVER_URL}service/${service_id}`,
                 { method: "DELETE" })
             navigate('/account') //redirects back to account
         } catch (Error) {
