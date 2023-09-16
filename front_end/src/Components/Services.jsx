@@ -52,7 +52,7 @@ function Services() {
                 </div>
             </div>
             <div class='box'>
-                <img id='servicesImg' src="/services.jpg" />
+                <img id='servicesImg' src="/services-low.jpg" />
             </div>
         </div>
     )

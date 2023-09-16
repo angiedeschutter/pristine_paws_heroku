@@ -15,7 +15,7 @@ function About() {
             </div>
             <div className="aboutBox">
                 <div>
-                    <img id='aboutImg' src='/About.jpg' />
+                    <img id='aboutImg' src='/About-low.jpg' />
                 </div>
             </div>
         </div>
