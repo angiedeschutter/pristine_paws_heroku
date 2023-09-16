@@ -22,6 +22,7 @@ function Edit() {
             const response = await fetch(`${process.env.REACT_APP_SERVER_URL}service/appointment/${service_id}`)
             const resData = await response.json()
             setService(resData)
+            console.log(resData)
         }
         fetchData()
     }, [service_id])
