@@ -1,4 +1,4 @@
-import { useState, useContext, useEffect } from "react"
+import { useState, useEffect } from "react"
 import { useNavigate, useParams } from "react-router"
 import { Link } from 'react-router-dom'
 
@@ -53,12 +53,9 @@ function Edit() {
         }
     }
 
-    
-
 
     return (
         <>
-        
             <h1> Edit or Cancel Your Appointment</h1>
             <form method='POST' onSubmit={editAppt} className="apptForm">
                 <div className='form'>
