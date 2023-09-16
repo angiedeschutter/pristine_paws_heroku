@@ -6,7 +6,7 @@ const { Service } = db
 service.get('/', async (req, res) => {
     try {
         const foundServices = await Service.findAll()
-        res.status(200).json(foundServices)
+        res.status(200).send('foundServices')
     } catch (Error) {
         console.log(Error)
         res.status(500).send('Oh no, could not find services')
@@ -19,7 +19,7 @@ service.get('/appointment/:service_id', async (req, res) => {
         const foundService = await Service.findOne({
             where: { service_id: req.params.service_id }
         })
-        res.status(200).json(foundService)
+        res.status(200).send('foundService')
     } catch (Error) {
         console.log(Error)
         res.status(500).send('Oh no, could not find services')
