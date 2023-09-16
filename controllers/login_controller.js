@@ -7,7 +7,7 @@ const { Login } = db
 login.get('/', async (req, res) => {
     try {
         const foundLogin = await Login.findAll()
-        res.status(200).json(foundLogin)
+        res.status(200).send('login')
     } catch (Error) {
         console.log(Error)
         res.status(500).send('Oh no, could not find users')
