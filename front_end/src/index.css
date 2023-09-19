@@ -14,7 +14,7 @@ code {
 
 
 #homeImg{
-  width:50%;
+  width:40%;
   padding-bottom: 10px;
 }
 
@@ -161,16 +161,17 @@ table{
 .social{
   display: inline-block;
   padding: 10px 10px;
-  font-size: 20px;;
+  font-size: 10px;
 }
 
 .info{
   display: inline-block;
   padding: 10px 20px;
+  font-size: 10px;
 }
 
 .review{
-  height: 150px;
+  height: 200px;
 }
 
 @media (max-width: 600px) {

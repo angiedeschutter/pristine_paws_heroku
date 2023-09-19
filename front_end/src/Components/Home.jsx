@@ -11,7 +11,7 @@ function Home() {
                 <Carousel>
                     <Carousel.Item>
                         <img className='review' src='blank.jpg'></img>
-                        <Carousel.Caption>
+                        <Carousel.Caption >
                             <h3><i className="fa-solid fa-star fa-beat" ></i><i className="fa-solid fa-star fa-beat" ></i><i className="fa-solid fa-star fa-beat" ></i><i className="fa-solid fa-star fa-beat" ></i><i className="fa-solid fa-star fa-beat" ></i></h3>
                             <p>Owners are awesome and really care about your pet!</p>
                             <p>- Sarah B.</p>
