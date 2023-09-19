@@ -13,7 +13,6 @@ function Home() {
                         <img className='review' src='blank.jpg'></img>
                         <Carousel.Caption>
                             <h3><i className="fa-solid fa-star fa-beat" ></i><i className="fa-solid fa-star fa-beat" ></i><i className="fa-solid fa-star fa-beat" ></i><i className="fa-solid fa-star fa-beat" ></i><i className="fa-solid fa-star fa-beat" ></i></h3>
-                            <p>Five Stars! </p>
                             <p>Owners are awesome and really care about your pet!</p>
                             <p>- Sarah B.</p>
                         </Carousel.Caption>
