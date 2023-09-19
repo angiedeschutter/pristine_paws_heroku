@@ -51,6 +51,7 @@ This project is currently deployed https://pristine-paws-bd61149d81a0.herokuapp.
 - Express
 - Postgres
 - Bootstrap
+- Heroku
 
 ## Credits
 
@@ -59,5 +60,5 @@ This project is currently deployed https://pristine-paws-bd61149d81a0.herokuapp.
     - https://www.vecteezy.com/photo/24398973-cute-little-puppy-in-bathroom-illustration-ai-generative
     - https://www.vecteezy.com/photo/2100438-woman-cutting-hair-a-dog
 
-## License
+
 

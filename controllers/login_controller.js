@@ -3,7 +3,7 @@ const db = require("../models")
 const bcrypt = require('bcrypt')
 const { Login } = db
 
-//find all users
+//find all users in the login database
 login.get('/', async (req, res) => {
     try {
         const foundLogin = await Login.findAll()
@@ -14,7 +14,7 @@ login.get('/', async (req, res) => {
     }
 })
 
-// CREATE A NEW USER
+// creates a new user and hashes the password with bcrypt
 login.post('/', async (req, res) => {
     try {
         let{password, ...rest}=req.body

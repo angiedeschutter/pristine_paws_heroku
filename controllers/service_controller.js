@@ -2,7 +2,7 @@ const service = require('express').Router()
 const db = require("../models")
 const { Service } = db
 
-//FIND ALL APPOINTMENTS
+//find all appointments in the service database
 service.get('/', async (req, res) => {
     try {
         const foundServices = await Service.findAll()
@@ -13,7 +13,7 @@ service.get('/', async (req, res) => {
     }
 })
 
-//FIND ONE APPOINTMENT
+//find one appointment in the service database by the serivice id #
 service.get('/appointment/:service_id', async (req, res) => {
     try {
         const foundService = await Service.findOne({
@@ -27,7 +27,7 @@ service.get('/appointment/:service_id', async (req, res) => {
 })
 
 
-// FIND All APPOINTMENTS FOR USER
+// FIND All APPOINTMENTS FOR USER THAT MATCH THE USER ID
 service.get('/:user_id', async (req, res) => {
     try {
         const foundAppointments = await Service.findAll({
@@ -40,7 +40,7 @@ service.get('/:user_id', async (req, res) => {
     }
 })
 
-// CREATE A NEW SERVCE APPOINTMENT
+// CREATE A NEW SERVCE APPOINTMENT 
 service.post('/', async (req, res) => {
     try {
         const newAppt = await Service.create(req.body)

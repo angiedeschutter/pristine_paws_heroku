@@ -4,6 +4,7 @@ import { useNavigate } from "react-router"
 import { CurrentUser } from "../contexts/CurrentUser"
 
 function Login() {
+
     const navigate = useNavigate()
 
     const { setCurrentUser } = useContext(CurrentUser)
@@ -11,10 +12,7 @@ function Login() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
-    const [errorMessage, setErrorMessage] = useState(null)
-
-
-
+    //This will check if the email and password provided are in the database when the form is submitted 
     const authUser = async (e) => {
         e.preventDefault()
         const user = { email, password }
@@ -29,7 +27,7 @@ function Login() {
 
 
         const data = await response.json()
-
+        //If there is a match, a token will be set to local storage and set the context of the current user
         if (response.status === 200) {
             setCurrentUser(data.user)
             //console.log(data.token)

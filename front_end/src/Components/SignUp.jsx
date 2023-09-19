@@ -2,13 +2,16 @@ import { useState } from "react"
 import { useNavigate } from "react-router"
 
 function SignUp() {
+
     const navigate = useNavigate()
+
+    //set current state blank
     const [first_name, setFirst_name] = useState('')
     const [last_name, setLast_name] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
-
+    //when the form is submitted, the information is posted to the back end database
     const createNewUser = async (e) => {
         e.preventDefault()
         const newUser = { first_name, last_name, email, password }

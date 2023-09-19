@@ -7,7 +7,9 @@ import { Link } from 'react-router-dom'
 function Edit() {
 
     const navigate = useNavigate()
+
     let { service_id } = useParams()
+
     const [service, setService] = useState({
         dog_name: '',
         breed: '',
@@ -17,6 +19,7 @@ function Edit() {
         time: ''
     })
 
+    //gets the appointment information from the database to autofill the forms default values based on the serivce id
     useEffect(() => {
         const fetchData = async () => {
             const response = await fetch(`${process.env.REACT_APP_SERVER_URL}service/appointment/${service_id}`)
@@ -27,7 +30,7 @@ function Edit() {
     }, [service_id])
 
 
-
+    //when the form is submitted, the information will be updated in the database
     async function editAppt(e) {
         e.preventDefault()
 
@@ -38,7 +41,7 @@ function Edit() {
             },
             body: JSON.stringify(service)
         })
-
+        //this redirects the user back to the account page after the submit 
         navigate(`/account`)
     }
 

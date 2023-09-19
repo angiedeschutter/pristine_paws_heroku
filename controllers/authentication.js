@@ -5,6 +5,7 @@ const jwt = require('json-web-token')
 
 const { Login } = db
 
+//sends the front end the token for user and sets the current user context
 auth.get('/profile', async (req, res) => {
     try {
         const [authenticationMethod, token] = req.headers.authorization.split(' ')
@@ -27,7 +28,7 @@ auth.get('/profile', async (req, res) => {
     }
 })
 
-
+//for the login, checks for a matching email and password(hashed) and sets the token if successful
 auth.post('/', async (req, res) => {
 
     let user = await Login.findOne({

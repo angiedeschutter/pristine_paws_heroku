@@ -7,7 +7,7 @@ function About() {
             <div className="aboutBox">
                 <div>
                     <h1>About Us</h1>
-                    <h2>At Pristine Pawss we treat all our furry companions as part of our family.</h2>
+                    <h2>At Pristine Paws we treat all our furry companions as part of our family.</h2>
                        <h2> Select the perfect package that fits your pup's needs and schedule an </h2>
                         <h2>appointment today with our expert groomers.
                         </h2>
@@ -15,7 +15,7 @@ function About() {
             </div>
             <div className="aboutBox">
                 <div>
-                    <img id='aboutImg' src='/About-low.jpg' />
+                    <img id='aboutImg' src='/About-low.jpg' alt="dog getting haircut"/>
                 </div>
             </div>
         </div>

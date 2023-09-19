@@ -6,7 +6,7 @@ function Account() {
     const [services, setService] = useState([])
     const { currentUser } = useContext(CurrentUser)
     
-    //GET THE SERVICES FROM THE DB WHERE ALL ARE FORM THE SAME USER_ID
+    //finds all the services from the database that match the current users id
     const getServices = async () => {
         try {
             const findServices = await fetch(`${process.env.REACT_APP_SERVER_URL}service/${currentUser.user_id}`)
@@ -17,6 +17,7 @@ function Account() {
         }
     }
     
+    //finds the services from the database on each render, if one is added, deleted, or edited, it will re-render
     useEffect(() => {
         getServices()
     }, )

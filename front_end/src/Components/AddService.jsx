@@ -6,7 +6,9 @@ import { CurrentUser } from '../contexts/CurrentUser'
 function AddService() {
 
     const { currentUser } = useContext(CurrentUser)
+
     const navigate = useNavigate()
+
     const [dog_name, setDog_name] = useState('')
     const [breed, setBreed] = useState('')
     const [size, setSize] = useState('')
@@ -15,8 +17,7 @@ function AddService() {
     const [time, setTime] = useState('')
     const [user_id, setUser_id]=useState(currentUser.user_id)
     
-  
-
+    //this will create a new row in the service database based on the submitted form
     const newService = async (e) => {
         e.preventDefault()
         const newAppt= { dog_name, breed, size, pack, date, time, user_id}

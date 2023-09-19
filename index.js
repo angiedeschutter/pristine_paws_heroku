@@ -14,9 +14,10 @@ app.use(cors())
 app.use(express.urlencoded({ extended: false }))
 app.use(defineCurrentUser)
 
+// sequelize connection with env variables
 let dbUrl = `postgres://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:5432/${process.env.DB_DATABASE}`
-// SEQUELIZE CONNECTION
 
+//sets the sequelize connection for Heroku
 const sequelize = new Sequelize(dbUrl, {
     dialect: 'postgres',
     protocol: 'postgres',
@@ -28,15 +29,10 @@ const sequelize = new Sequelize(dbUrl, {
     }
 })
 
-
-
-
 // serve static front end in production mode
 if (process.env.NODE_ENV === "production") {
     app.use(express.static(path.join(__dirname, 'public', 'build')));
 }
-
-
 
 // ROOT
 app.get('/', (req, res) => {
@@ -53,7 +49,7 @@ app.use('/service', require('./controllers/service_controller'))
 app.use('/auth', require('./controllers/authentication'))
 
 
-
+//confirms if sequelize is able to connect to the database 
 try {
     sequelize.authenticate() 
     console.log(`Connected with Sequelize at ${process.env.DATABASE_URL}`) 
@@ -61,6 +57,7 @@ try {
     console.log(`Unable to connect to PG: ${err}`) 
 }
 
+//redirects the build file so routes will work
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '/public/build/index.html'));
   });

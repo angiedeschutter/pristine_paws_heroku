@@ -13,7 +13,6 @@ code {
 }
 
 
-
 #homeImg{
   width:50%;
 }
@@ -32,6 +31,8 @@ code {
   bottom:0;
   position:fixed;
   width: 100%;
+  display: flex;
+  justify-content: space-around;
 
 }
 
@@ -70,7 +71,7 @@ li{
   border-radius: 10px;
 }
 
-.services{
+.services, .about{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -112,6 +113,7 @@ li{
   background-color: black;
   color:white;
   border-radius: 10px;
+  
 }
 
 img{
@@ -139,7 +141,7 @@ table{
 }
 
 #logo{
-  width: 100px;
+  width:100px;
 }
 
 .apptForm{
@@ -154,6 +156,19 @@ table{
   padding: 5px;
   font-size:20px;
 }
+
+.social{
+  display: inline-block;
+  padding: 10px 10px;
+  font-size: 20px;;
+}
+
+.info{
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+
 @media (max-width: 600px) {
   #homeImg {
     width: 100%;;
@@ -162,7 +177,8 @@ table{
     flex-wrap: wrap;
   }
   #aboutImg{
-    width: 100%;
+    width:100%;
   }
+ 
   
 }  
