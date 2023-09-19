@@ -23,7 +23,7 @@ code {
 }
 
 #aboutImg{
-  height:500px;
+  width:600px;
 
 }
 
@@ -161,7 +161,7 @@ table{
   .about{
     flex-wrap: wrap;
   }
-  table{
+  #aboutImg{
     width: 100%;
   }
   

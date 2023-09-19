@@ -16,6 +16,7 @@ app.use(defineCurrentUser)
 
 let dbUrl = `postgres://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:5432/${process.env.DB_DATABASE}`
 // SEQUELIZE CONNECTION
+
 const sequelize = new Sequelize(dbUrl, {
     dialect: 'postgres',
     protocol: 'postgres',
@@ -26,6 +27,8 @@ const sequelize = new Sequelize(dbUrl, {
         }
     }
 })
+
+
 
 
 // serve static front end in production mode

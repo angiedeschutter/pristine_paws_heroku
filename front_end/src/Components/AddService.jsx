@@ -59,7 +59,7 @@ function AddService() {
                     <select name="pack" id="pack" value={pack}  onChange={(e) => setPack(e.target.value)} required>
                         <option value='' selected disabled hidden>Select a Package</option>
                         <option value="Basic Package">Basic Wash</option>
-                        <option value="premium Package">Premium Package</option>
+                        <option value="Premium Package">Premium Package</option>
                         <option value="Complete Package">Complete Pamper Package</option>
                         <option value="Nail Clipping">Nail Clipping</option>
                     </select>
