@@ -12,6 +12,8 @@ function Login() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
+    const [errorMessage, setErrorMessage] = useState(null)
+
     //This will check if the email and password provided are in the database when the form is submitted 
     const authUser = async (e) => {
         e.preventDefault()
