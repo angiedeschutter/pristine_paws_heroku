@@ -172,6 +172,7 @@ table{
 
 .review{
   height: 200px;
+  
 }
 
 @media (max-width: 600px) {
@@ -184,6 +185,10 @@ table{
   #aboutImg{
     width:100%;
   }
+  .review{
+    width:400px;
+  }
+
  
   
 }  
